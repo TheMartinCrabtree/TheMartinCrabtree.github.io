@@ -7,7 +7,7 @@ type FooterItemProps = {
 };
 
 type FooterProps = {
-  footer?: Array<FooterItemProps>;
+  footerData?: FooterItemProps[];
 };
 
 const FooterWrapper = styled.div`
@@ -34,6 +34,7 @@ const ItemContainer = styled.div`
 `;
 
 const Footer = ({ footerData }: FooterProps) => {
+  console.log("footer props", footerData);
   return (
     <FooterWrapper>
       <LayoutWrapper>Footer</LayoutWrapper>

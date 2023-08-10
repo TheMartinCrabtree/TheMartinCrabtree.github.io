@@ -9,8 +9,6 @@ import { MainSection } from "./components/sections";
 import data from "./data";
 // import "./App.css";
 
-// body: skills & expertise, projects, experience
-
 // for testing scrolling etc
 const Background = styled.div`
   background-image: url(background.jpg);
