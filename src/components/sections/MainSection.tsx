@@ -35,4 +35,5 @@ const MainSection = ({ sections }: MainSectionProps) => {
   );
 };
 
+export { type MainSectionProps };
 export default MainSection;

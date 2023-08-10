@@ -42,9 +42,21 @@ const data = {
   sections: {
     sections: sectionArr,
   },
-  footer: {
-    // github, medium article,  linkedin
-  },
+  // footer: github, medium article,  linkedin}
+  footer: [
+    {
+      title: "Github",
+    },
+    {
+      title: "Linkedin",
+    },
+    {
+      title: "Medium",
+    },
+    {
+      title: "YouTube",
+    },
+  ],
 };
 
 export default data;
