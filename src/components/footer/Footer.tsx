@@ -33,11 +33,21 @@ const ItemContainer = styled.div`
   text-align: center;
 `;
 
+const _renderItems = ({ footerData }: FooterProps) => {
+  return (
+    footerData &&
+    footerData.map(({ title, link }: FooterItemProps) => {
+      return <ItemContainer key={crypto.randomUUID()}>{title}</ItemContainer>;
+    })
+  );
+};
+
 const Footer = ({ footerData }: FooterProps) => {
-  console.log("footer props", footerData);
   return (
     <FooterWrapper>
-      <LayoutWrapper>Footer</LayoutWrapper>
+      <LayoutWrapper>
+        {footerData && _renderItems({ footerData })}
+      </LayoutWrapper>
     </FooterWrapper>
   );
 };
