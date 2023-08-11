@@ -28,13 +28,13 @@ const sectionArr = [
 
 const data = {
   header: {
-    title: "Header Title",
-    children: "Header Subtitle",
+    title: "Martin Crabtree",
+    children: "Full-Stack Developer",
   },
   hero: {
     textblock: {
-      title: "Martin Crabtree",
-      subtitle: "Full-stack Developer",
+      title: "title text",
+      subtitle: "subtitle text",
       body: "React, Jest, Storybook, Styled-components, Ruby, Rails, SQL, REST API, JavaScript, Redux, HTML/CSS, Java, C#, SQL, PostgreSQL, SQLite, Linux, Git, TypeScript, Express.js",
     },
     imageblock: {},

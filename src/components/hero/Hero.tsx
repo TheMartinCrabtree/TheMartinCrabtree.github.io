@@ -7,7 +7,7 @@ export interface HeroProps {
 }
 
 const HeroContainer = styled.div`
-  color: black;
+  color: lightgrey;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -17,22 +17,23 @@ const HeroContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
-  width: 50%;
-  background-color: lightgrey;
+  padding: 15px;
+  width: 100%;
 `;
 
 // background-image: url(headshot.jpg);
 const ImageContainer = styled.div`
   width: auto;
-
-  background-color: lightslategrey;
+  padding: 10px 20px;
 `;
 
 const BodyContainer = styled.div`
-  font-size: 10px;
+  margin: 1vw;
+  font-size: 15px;
 `;
 
 const ImageComponent = styled.img`
+  max-height: 20vh;
   max-width: 100%;
 `;
 
