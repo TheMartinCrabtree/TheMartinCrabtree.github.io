@@ -42,8 +42,8 @@ const data = {
   },
   hero: {
     textblock: {
-      title: "NEED A TITLE",
-      subtitle: "IS A SUBTITLE NEEDED",
+      title: "I NEED A TITLE",
+      subtitle: "I ALSO NEED A SUBTITLE",
       body: "Skills: React, Jest, Storybook, Styled-components, WC3 Accessibility, Ruby, Rails, SQL, REST API, JavaScript, Redux, HTML/CSS, Java, C#, SQL, PostgreSQL, SQLite, Linux, Git, TypeScript, Express.js",
     },
     imageblock: {

@@ -25,7 +25,7 @@ const ContentWrapper = styled.div`
   border: 2px solid #ffffff;
 
   align-self: flex-end;
-  background-color: red;
+  background-color: #302c2c;
 `;
 
 const TitleContainer = styled.div``;
