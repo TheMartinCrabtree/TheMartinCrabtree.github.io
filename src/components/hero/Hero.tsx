@@ -1,8 +1,14 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
+interface TextBlock {
+  title?: string;
+  subtitle?: string;
+  body?: string;
+}
+
 export interface HeroProps {
-  textblock?: any;
+  textblock?: TextBlock;
   imageblock?: any;
 }
 
@@ -21,7 +27,6 @@ const TextContainer = styled.div`
   width: 100%;
 `;
 
-// background-image: url(headshot.jpg);
 const ImageContainer = styled.div`
   width: auto;
   padding: 10px 20px;
@@ -49,7 +54,7 @@ const Hero = ({ textblock, imageblock }: HeroProps) => {
         )}
       </TextContainer>
       <ImageContainer>
-        <ImageComponent src="./headshot.jpg" alt="image" />
+        <ImageComponent src={imageblock.url} alt={imageblock.altText} />
       </ImageContainer>
     </HeroContainer>
   );

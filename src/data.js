@@ -1,6 +1,6 @@
 const sectionArr = [
   {
-    type: "grid",
+    layout: "grid",
     data: [
       { title: "grid item 1" },
       { title: "grid item 2" },
@@ -13,15 +13,15 @@ const sectionArr = [
     ],
   },
   {
-    type: "textBlock",
+    layout: "textBlock",
     data: "textBlock",
   },
   {
-    type: "textBlock",
+    layout: "textBlock",
     data: "textBlock",
   },
   {
-    type: "textBlock",
+    layout: "textBlock",
     data: "textBlock",
   },
 ];
@@ -29,20 +29,22 @@ const sectionArr = [
 const data = {
   header: {
     title: "Martin Crabtree",
-    children: "Full-Stack Developer",
+    children: "Full-Stack Web Developer",
   },
   hero: {
     textblock: {
-      title: "title text",
-      subtitle: "subtitle text",
-      body: "React, Jest, Storybook, Styled-components, Ruby, Rails, SQL, REST API, JavaScript, Redux, HTML/CSS, Java, C#, SQL, PostgreSQL, SQLite, Linux, Git, TypeScript, Express.js",
+      title: "NEED A TITLE",
+      subtitle: "IS A SUBTITLE NEEDED",
+      body: "Skills: React, Jest, Storybook, Styled-components, WC3 Accessibility, Ruby, Rails, SQL, REST API, JavaScript, Redux, HTML/CSS, Java, C#, SQL, PostgreSQL, SQLite, Linux, Git, TypeScript, Express.js",
     },
-    imageblock: {},
+    imageblock: {
+      url: "./headshot.jpg",
+      altText: "image Martin Crabtree",
+    },
   },
   sections: {
     sections: sectionArr,
   },
-  // footer: github, medium article,  linkedin}
   footer: {
     footerData: [
       {

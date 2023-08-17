@@ -1,9 +1,14 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
+interface DataObj {
+  heading?: string;
+  body?: any;
+}
+
 type SubSectionProps = {
-  type?: "grid" | "textBlock" | "imageBlock";
-  data?: any;
+  layout: "grid" | "textBlock" | "imageBlock";
+  data?: DataObj;
 };
 
 const LayoutWrapper = styled.div`
@@ -23,10 +28,16 @@ const ContentWrapper = styled.div`
   background-color: red;
 `;
 
-const SubSection = ({}: SubSectionProps) => {
+const TitleContainer = styled.div``;
+const BodyContainer = styled.div``;
+
+const SubSection = ({ layout, data }: SubSectionProps) => {
   return (
     <LayoutWrapper>
-      <ContentWrapper>SubSection</ContentWrapper>
+      <ContentWrapper>
+        <TitleContainer>{data?.heading}</TitleContainer>
+        <BodyContainer>{data?.body}</BodyContainer>
+      </ContentWrapper>
     </LayoutWrapper>
   );
 };

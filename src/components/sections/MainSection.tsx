@@ -23,7 +23,9 @@ const MainSection = ({ sections }: MainSectionProps) => {
     return (
       sections &&
       sections.map(({ data }: SubSectionProps) => {
-        return <SubSection {...data} />;
+        console.log("section data", data);
+        // need to implement layout property
+        return <SubSection layout={"grid"} {...data} />;
       })
     );
   };
