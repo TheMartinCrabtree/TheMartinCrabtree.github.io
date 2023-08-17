@@ -11,6 +11,7 @@ type FooterProps = {
 };
 
 const FooterWrapper = styled.div`
+  padding-top: 1vh;
   width: 100%;
   background-color: #000018;
   color: white;
@@ -30,6 +31,8 @@ const LayoutWrapper = styled.div`
 `;
 
 const ItemContainer = styled.div`
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 `;
 

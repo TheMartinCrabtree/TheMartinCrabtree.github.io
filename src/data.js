@@ -14,15 +14,24 @@ const sectionArr = [
   },
   {
     layout: "textBlock",
-    data: "textBlock",
+    data: {
+      heading: "text block 1 heading",
+      body: "text block 1 body",
+    },
   },
   {
     layout: "textBlock",
-    data: "textBlock",
+    data: {
+      heading: "text block 1 heading",
+      body: "text block 1 body",
+    },
   },
   {
     layout: "textBlock",
-    data: "textBlock",
+    data: {
+      heading: "text block 1 heading",
+      body: "testing body length: The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet. The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet. The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.",
+    },
   },
 ];
 

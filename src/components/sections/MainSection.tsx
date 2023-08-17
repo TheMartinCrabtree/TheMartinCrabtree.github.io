@@ -22,10 +22,11 @@ const MainSection = ({ sections }: MainSectionProps) => {
   const _renderSubSections = ({ sections }: MainSectionProps) => {
     return (
       sections &&
-      sections.map(({ data }: SubSectionProps) => {
-        console.log("section data", data);
+      sections.map(({ data, layout }: SubSectionProps) => {
         // need to implement layout property
-        return <SubSection layout={"grid"} {...data} />;
+        return (
+          <SubSection key={crypto.randomUUID()} layout={layout} data={data} />
+        );
       })
     );
   };
