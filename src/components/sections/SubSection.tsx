@@ -21,6 +21,7 @@ const ContentWrapper = styled.div`
   color: white;
   text-align: center;
   min-height: 120px;
+  padding: 10px 0px;
   border-radius: 8px;
   border: 2px solid #ffffff;
 

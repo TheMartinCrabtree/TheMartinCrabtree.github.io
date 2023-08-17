@@ -14,7 +14,7 @@ export interface HeroProps {
 
 const HeroContainer = styled.div`
   color: lightgrey;
-  background-color: rgb(60 72 113);
+  background-color: rgb(26 36 71);
   display: flex;
   flex-direction: row;
   margin: 0 auto;
