@@ -42,8 +42,8 @@ const data = {
   },
   hero: {
     textblock: {
-      title: "I NEED A TITLE",
-      subtitle: "I ALSO NEED A SUBTITLE",
+      title: "FRONT-END SOFTWARE ENGINEER",
+      subtitle: "EXSTENSIBLE AND PERFORMANT WEB DEVELOPMENT",
       body: "Skills: React, Jest, Storybook, Styled-components, WC3 Accessibility, Ruby, Rails, SQL, REST API, JavaScript, Redux, HTML/CSS, Java, C#, SQL, PostgreSQL, SQLite, Linux, Git, TypeScript, Express.js",
     },
     imageblock: {
