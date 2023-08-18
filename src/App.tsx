@@ -12,10 +12,11 @@ import data from "./data";
 // for testing scrolling etc
 const Background = styled.div`
   background-image: url(background.jpg);
+  background-size: 100%;
 `;
 
+// height: 100vh;
 const TempBody = styled.div`
-  height: 100vh;
   background-color: black;
   opacity: 0.9;
 
