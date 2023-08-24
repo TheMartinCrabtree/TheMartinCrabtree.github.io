@@ -2,20 +2,24 @@ import React, { ReactNode } from "react";
 import styled from "styled-components";
 
 interface DataObj {
-  heading?: string;
   body?: any;
+  thumbnail?: string;
+}
+
+interface GridObj {
+  heading?: string;
 }
 
 type SubSectionProps = {
   layout: "grid" | "textBlock" | "imageBlock";
-  data?: DataObj;
+  // data?: DataObj | Array<GridObj>;
+  data?: any;
 };
 
 const LayoutWrapper = styled.div`
   padding: 20px;
 `;
 
-// temp text align
 const ContentWrapper = styled.div`
   width: 100%;
   color: white;
@@ -29,14 +33,41 @@ const ContentWrapper = styled.div`
   background-color: #302c2c;
 `;
 
+const TopContainer = styled.div``;
+
+const ThumbnailContainer = styled.div``;
 const TitleContainer = styled.div``;
 const BodyContainer = styled.div``;
+const GridContainer = styled.div`
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  flex-flow: row wrap;
+  flex-basis: 20%;
+`;
+
+const GridItem = styled.div``;
+
+const _renderGrid = (data: Array<GridObj>) => {
+  return (
+    data &&
+    data.map((gridObj: GridObj) => {
+      return <GridItem>{gridObj?.heading && gridObj.heading}</GridItem>;
+    })
+  );
+};
 
 const SubSection = ({ layout, data }: SubSectionProps) => {
   return (
     <LayoutWrapper>
       <ContentWrapper>
-        <TitleContainer>{data?.heading}</TitleContainer>
+        {data && layout === "grid" && (
+          <GridContainer>{_renderGrid(data)}</GridContainer>
+        )}
+        <TopContainer>
+          <TitleContainer>{data?.heading}</TitleContainer>
+          <ThumbnailContainer>{data?.thumbnail}</ThumbnailContainer>
+        </TopContainer>
         <BodyContainer>{data?.body}</BodyContainer>
       </ContentWrapper>
     </LayoutWrapper>

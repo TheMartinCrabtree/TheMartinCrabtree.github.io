@@ -15,7 +15,6 @@ const Background = styled.div`
   background-size: 100%;
 `;
 
-// height: 100vh;
 const TempBody = styled.div`
   background-color: black;
   opacity: 0.9;
