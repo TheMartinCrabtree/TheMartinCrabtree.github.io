@@ -40,7 +40,9 @@ const _renderItems = ({ footerData }: FooterProps) => {
   return (
     footerData &&
     footerData.map(({ title, link }: FooterItemProps) => {
-      return <ItemContainer key={crypto.randomUUID()}>{title}</ItemContainer>;
+      const generatedKey =
+        window && window.crypto && window.crypto.randomUUID();
+      return <ItemContainer key={generatedKey}>{title}</ItemContainer>;
     })
   );
 };

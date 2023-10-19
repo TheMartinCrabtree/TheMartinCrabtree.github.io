@@ -46,7 +46,9 @@ const GridContainer = styled.div`
   flex-basis: 20%;
 `;
 
-const GridItem = styled.div``;
+const GridItem = styled.div`
+  min-width: 8vw;
+`;
 
 const _renderGrid = (data: Array<GridObj>) => {
   return (

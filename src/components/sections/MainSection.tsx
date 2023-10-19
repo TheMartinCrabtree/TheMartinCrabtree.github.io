@@ -24,9 +24,10 @@ const MainSection = ({ sections }: MainSectionProps) => {
       sections &&
       sections.map(({ data, layout }: SubSectionProps) => {
         // need to implement layout property
-        return (
-          <SubSection key={crypto.randomUUID()} layout={layout} data={data} />
-        );
+        const generatedKey =
+          window && window.crypto && window.crypto.randomUUID();
+
+        return <SubSection key={generatedKey} layout={layout} data={data} />;
       })
     );
   };

@@ -33,19 +33,19 @@ const sectionArr = [
       body: "Mean Guppy, Remote, New York Software Engineer, 2020-present  Software engineering and web design as a subcontractor for Verizon Marketing Team's.  Brooklyn Game Labs, Brooklyn, New York  Instructor, 2018-2019  Instruct cohorts of 15-20 kids aged 7-13 to play and design table-top games, guiding analysis on design choices. American Institute of Certified Public Accountants (AICPA), Ewing, New Jersey  Communications Specialist, 2007 - 2012.",
     },
   },
-  {
-    layout: "textBlock",
-    data: {
-      heading: "text block 1 heading",
-      body: "testing body length: The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet. The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet. The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.",
-    },
-  },
+  // {
+  //   layout: "textBlock",
+  //   data: {
+  //     heading: "text block 1 heading",
+  //     body: "testing body length: The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet. The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet. The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.",
+  //   },
+  // },
 ];
 
 const data = {
   header: {
     title: "Martin Crabtree",
-    children: "Full-Stack Web Developer",
+    children: "Full-Stack Engineer",
   },
   hero: {
     textblock: {

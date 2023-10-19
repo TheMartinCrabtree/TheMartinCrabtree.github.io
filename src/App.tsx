@@ -15,7 +15,7 @@ const Background = styled.div`
   background-size: 100%;
 `;
 
-const TempBody = styled.div`
+const MainWrapper = styled.div`
   background-color: black;
   opacity: 0.9;
 
@@ -40,7 +40,7 @@ function App() {
 
   return (
     <Background>
-      <TempBody>
+      <MainWrapper>
         <LayoutWrapper>
           <Header {...header} />
           <Hero {...hero} />
@@ -48,7 +48,7 @@ function App() {
           <Spacer />
           <Footer {...footer} />
         </LayoutWrapper>
-      </TempBody>
+      </MainWrapper>
     </Background>
   );
 }
