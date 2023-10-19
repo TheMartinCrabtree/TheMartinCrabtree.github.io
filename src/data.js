@@ -2,14 +2,14 @@ const sectionArr = [
   {
     layout: "grid",
     data: [
-      { heading: "grid item 1" },
-      { heading: "grid item 2" },
-      { heading: "grid item 3" },
-      { heading: "grid item 4" },
-      { heading: "grid item 5" },
-      { heading: "grid item 6" },
-      { heading: "grid item 7" },
-      { heading: "grid item 8" },
+      { heading: "Work in progress 1" },
+      { heading: "Work in progress 2" },
+      { heading: "Work in progress 3" },
+      { heading: "Work in progress 4" },
+      { heading: "Work in progress 5" },
+      { heading: "Work in progress 6" },
+      { heading: "Work in progress 7" },
+      { heading: "Work in progress 8" },
     ],
   },
   {
