@@ -10,9 +10,15 @@ interface GridObj {
   heading?: string;
 }
 
+interface ListObj {
+  leadingText?: string;
+  text?: string;
+  bullets?: boolean;
+  src?: string;
+}
+
 type SubSectionProps = {
-  layout: "grid" | "textBlock" | "imageBlock";
-  // data?: DataObj | Array<GridObj>;
+  layout: "grid" | "textBlock" | "imageBlock" | "listBlock";
   data?: any;
 };
 
@@ -36,8 +42,14 @@ const ContentWrapper = styled.div`
 const TopContainer = styled.div``;
 
 const ThumbnailContainer = styled.div``;
-const TitleContainer = styled.div``;
-const BodyContainer = styled.div``;
+const TitleContainer = styled.h3`
+  color: lightSteelBlue;
+  margin: 0.25em 25px;
+`;
+const BodyContainer = styled.div`
+  color: ghostwhite;
+  margin: 0 0.5em;
+`;
 const GridContainer = styled.div`
   padding: 15px;
   display: flex;
@@ -50,6 +62,14 @@ const GridItem = styled.div`
   min-width: 8vw;
 `;
 
+const StyledUl = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+`;
+// li { list-style-image: url(img/image.png); }
+const StyledLi = styled.li``;
+
 const _renderGrid = (data: Array<GridObj>) => {
   return (
     data &&
@@ -58,6 +78,8 @@ const _renderGrid = (data: Array<GridObj>) => {
     })
   );
 };
+
+const _renderListBlock = (data: Array<ListObj>) => {};
 
 const SubSection = ({ layout, data }: SubSectionProps) => {
   return (
