@@ -36,13 +36,41 @@ const ItemContainer = styled.div`
   text-align: center;
 `;
 
+// typescript def //
+// interface URL {
+//   hash: string;
+//   host: string;
+//   hostname: string;
+//   href: string;
+//   readonly origin: string;
+//   password: string;
+//   pathname: string;
+//   port: string;
+//   protocol: string;
+//   search: string;
+//   username: string;
+//   toString(): string;
+// }
+const StyledLink = styled.a`
+  color: lightSteelBlue;
+  &:hover {
+    color: ghostwhite;
+  }
+`;
+
 const _renderItems = ({ footerData }: FooterProps) => {
   return (
     footerData &&
     footerData.map(({ title, link }: FooterItemProps) => {
       const generatedKey =
         window && window.crypto && window.crypto.randomUUID();
-      return <ItemContainer key={generatedKey}>{title}</ItemContainer>;
+      return (
+        <ItemContainer key={generatedKey}>
+          <StyledLink href="https://github.com/TheMartinCrabtree">
+            {title}
+          </StyledLink>
+        </ItemContainer>
+      );
     })
   );
 };

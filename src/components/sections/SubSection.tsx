@@ -48,7 +48,7 @@ const TitleContainer = styled.h3`
 `;
 const BodyContainer = styled.div`
   color: ghostwhite;
-  margin: 0 0.5em;
+  margin: 0.25em 0.5em;
 `;
 const GridContainer = styled.div`
   padding: 15px;

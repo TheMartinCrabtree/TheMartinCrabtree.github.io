@@ -66,15 +66,21 @@ const data = {
     footerData: [
       {
         title: "Github",
+        link: { href: "https://github.com/TheMartinCrabtree" },
       },
       {
         title: "Linkedin",
+        link: { href: "https://www.linkedin.com/in/themartincrabtree" },
       },
       {
         title: "Medium",
+        link: { href: "https://medium.com/@martin.crabtree" },
       },
       {
         title: "YouTube",
+        link: {
+          href: "https://www.youtube.com/channel/UC5e1qRCZx42UHOlDimDt5UA",
+        },
       },
     ],
   },
