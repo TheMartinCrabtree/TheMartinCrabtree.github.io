@@ -1,13 +1,16 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
-type FooterItemProps = {
+interface FooterItemProps {
   title: string;
   link?: URL;
-};
+}
 
+// type FooterProps = {
+//   footerData?: FooterItemProps[];
+// };
 type FooterProps = {
-  footerData?: FooterItemProps[];
+  footerData?: Array<FooterItemProps>;
 };
 
 const FooterWrapper = styled.div`
@@ -61,7 +64,7 @@ const StyledLink = styled.a`
 const _renderItems = ({ footerData }: FooterProps) => {
   return (
     footerData &&
-    footerData.map(({ title, link }: FooterItemProps) => {
+    footerData.map(({ title }: FooterItemProps) => {
       const generatedKey =
         window && window.crypto && window.crypto.randomUUID();
       return (
