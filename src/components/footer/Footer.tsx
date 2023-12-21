@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 interface FooterItemProps {
   title: string;
-  link?: URL;
+  // link?: string;
 }
 
 // type FooterProps = {
