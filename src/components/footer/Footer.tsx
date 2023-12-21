@@ -1,14 +1,28 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
+// typescript def //
+// interface URL {
+//   hash: string;
+//   host: string;
+//   hostname: string;
+//   href: string;
+//   readonly origin: string;
+//   password: string;
+//   pathname: string;
+//   port: string;
+//   protocol: string;
+//   search: string;
+//   username: string;
+//   toString(): string;
+// }
+
 interface FooterItemProps {
   title: string;
-  // link?: string;
+  link?: string;
+  // link?: URL;
 }
 
-// type FooterProps = {
-//   footerData?: FooterItemProps[];
-// };
 type FooterProps = {
   footerData?: Array<FooterItemProps>;
 };
@@ -39,21 +53,6 @@ const ItemContainer = styled.div`
   text-align: center;
 `;
 
-// typescript def //
-// interface URL {
-//   hash: string;
-//   host: string;
-//   hostname: string;
-//   href: string;
-//   readonly origin: string;
-//   password: string;
-//   pathname: string;
-//   port: string;
-//   protocol: string;
-//   search: string;
-//   username: string;
-//   toString(): string;
-// }
 const StyledLink = styled.a`
   color: lightSteelBlue;
   &:hover {
