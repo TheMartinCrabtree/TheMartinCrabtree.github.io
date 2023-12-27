@@ -63,14 +63,12 @@ const StyledLink = styled.a`
 const _renderItems = ({ footerData }: FooterProps) => {
   return (
     footerData &&
-    footerData.map(({ title }: FooterItemProps) => {
+    footerData.map(({ title, link }: FooterItemProps) => {
       const generatedKey =
         window && window.crypto && window.crypto.randomUUID();
       return (
         <ItemContainer key={generatedKey}>
-          <StyledLink href="https://github.com/TheMartinCrabtree">
-            {title}
-          </StyledLink>
+          <StyledLink href={link}>{title}</StyledLink>
         </ItemContainer>
       );
     })

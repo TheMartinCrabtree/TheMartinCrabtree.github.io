@@ -55,11 +55,15 @@ const GridContainer = styled.div`
   display: flex;
   gap: 15px;
   flex-flow: row wrap;
+  justify-content: space-evenly;
   flex-basis: 20%;
 `;
 
 const GridItem = styled.div`
   min-width: 8vw;
+  &:hover {
+    color: cornflowerblue;
+  }
 `;
 
 const StyledUl = styled.ul`
