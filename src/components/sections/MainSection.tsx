@@ -22,12 +22,19 @@ const MainSection = ({ sections }: MainSectionProps) => {
   const _renderSubSections = ({ sections }: MainSectionProps) => {
     return (
       sections &&
-      sections.map(({ data, layout }: SubSectionProps) => {
+      sections.map(({ data, layout, heading }: SubSectionProps) => {
         // need to implement layout property
         const generatedKey =
           window && window.crypto && window.crypto.randomUUID();
 
-        return <SubSection key={generatedKey} layout={layout} data={data} />;
+        return (
+          <SubSection
+            key={generatedKey}
+            layout={layout}
+            heading={heading}
+            data={data}
+          />
+        );
       })
     );
   };

@@ -19,6 +19,7 @@ interface ListObj {
 
 type SubSectionProps = {
   layout: "grid" | "textBlock" | "imageBlock" | "listBlock";
+  heading?: string;
   data?: any;
 };
 
@@ -85,18 +86,18 @@ const _renderGrid = (data: Array<GridObj>) => {
 
 const _renderListBlock = (data: Array<ListObj>) => {};
 
-const SubSection = ({ layout, data }: SubSectionProps) => {
+const SubSection = ({ layout, data, heading }: SubSectionProps) => {
   return (
     <LayoutWrapper>
       <ContentWrapper>
-        {data && layout === "grid" && (
-          <GridContainer>{_renderGrid(data)}</GridContainer>
-        )}
         <TopContainer>
-          <TitleContainer>{data?.heading}</TitleContainer>
+          {heading && <TitleContainer>{heading}</TitleContainer>}
           <ThumbnailContainer>{data?.thumbnail}</ThumbnailContainer>
         </TopContainer>
         <BodyContainer>{data?.body}</BodyContainer>
+        {data && layout === "grid" && (
+          <GridContainer>{_renderGrid(data)}</GridContainer>
+        )}
       </ContentWrapper>
     </LayoutWrapper>
   );
