@@ -17,9 +17,15 @@ interface ListObj {
   src?: string;
 }
 
+interface ThumbObj {
+  url: string;
+  altText: string;
+}
+
 type SubSectionProps = {
   layout: "grid" | "textBlock" | "imageBlock" | "listBlock";
   heading?: string;
+  thumbnail?: ThumbObj;
   data?: any;
 };
 
@@ -75,6 +81,11 @@ const StyledUl = styled.ul`
 // li { list-style-image: url(img/image.png); }
 const StyledLi = styled.li``;
 
+const ImageComponent = styled.img`
+  max-height: 20vh;
+  max-width: 100%;
+`;
+
 const _renderGrid = (data: Array<GridObj>) => {
   return (
     data &&
@@ -86,13 +97,15 @@ const _renderGrid = (data: Array<GridObj>) => {
 
 const _renderListBlock = (data: Array<ListObj>) => {};
 
+const _renderThumbnail = () => {};
+
 const SubSection = ({ layout, data, heading }: SubSectionProps) => {
   return (
     <LayoutWrapper>
       <ContentWrapper>
         <TopContainer>
-          {heading && <TitleContainer>{heading}</TitleContainer>}
           <ThumbnailContainer>{data?.thumbnail}</ThumbnailContainer>
+          {heading && <TitleContainer>{heading}</TitleContainer>}
         </TopContainer>
         <BodyContainer>{data?.body}</BodyContainer>
         {data && layout === "grid" && (
