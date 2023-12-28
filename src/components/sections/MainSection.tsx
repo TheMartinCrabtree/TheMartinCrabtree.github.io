@@ -22,7 +22,7 @@ const MainSection = ({ sections }: MainSectionProps) => {
   const _renderSubSections = ({ sections }: MainSectionProps) => {
     return (
       sections &&
-      sections.map(({ data, layout, heading }: SubSectionProps) => {
+      sections.map(({ data, layout, heading, thumbnail }: SubSectionProps) => {
         // need to implement layout property
         const generatedKey =
           window && window.crypto && window.crypto.randomUUID();
@@ -32,6 +32,7 @@ const MainSection = ({ sections }: MainSectionProps) => {
             key={generatedKey}
             layout={layout}
             heading={heading}
+            thumbnail={thumbnail}
             data={data}
           />
         );

@@ -1,5 +1,5 @@
 export default {
   desktop: "1280px",
-  desktopSmall: "1080px",
-  mobile: "720px",
+  desktopSmall: "900px",
+  mobile: "360px",
 };

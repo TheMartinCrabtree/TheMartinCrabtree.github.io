@@ -43,6 +43,7 @@ const ImageComponent = styled.img`
 `;
 
 // need to set fonts
+// need to make the image and title stack for mobile viewports
 const Hero = ({ textblock, imageblock }: HeroProps) => {
   return (
     <HeroContainer>

@@ -28,6 +28,10 @@ const sectionArr = [
   {
     layout: "textBlock",
     heading: "Verizon Design Systems:",
+    thumbnail: {
+      url: "./VerizonLogo.png",
+      altText: "verizon logo",
+    },
     data: {
       body: "Use React and Typescript to create a component library that serve as the foundation for mobile, tablet and desktop applications across all Verizon marketing teams. Created tests utilising React testing library for validation and quality control. Created prototype and mock web pages that implement components for internal review. Work with content developers that integrate components into the Adobe Experience Manager (AEM). Making web components accessible to the vision and hearing impaired. Making the web accessible to people with disabilities using JAWS, Google talkback, and Apple voiceover.",
     },

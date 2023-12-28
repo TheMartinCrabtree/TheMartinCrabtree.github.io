@@ -38,6 +38,7 @@ const FooterWrapper = styled.div`
   align-self: flex-end;
 `;
 
+// need to change to flex-direction: column with mobile viewport
 const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: row;

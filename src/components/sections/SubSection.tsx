@@ -87,24 +87,36 @@ const ImageComponent = styled.img`
 `;
 
 const _renderGrid = (data: Array<GridObj>) => {
+  const generatedKey = window && window.crypto && window.crypto.randomUUID();
   return (
     data &&
     data.map((gridObj: GridObj) => {
-      return <GridItem>{gridObj?.heading && gridObj.heading}</GridItem>;
+      return (
+        <GridItem key={generatedKey}>
+          {gridObj?.heading && gridObj.heading}
+        </GridItem>
+      );
     })
   );
 };
 
 const _renderListBlock = (data: Array<ListObj>) => {};
 
-const _renderThumbnail = () => {};
+const _renderThumbnail = (thumbnailObj: ThumbObj) => {
+  const { url, altText } = thumbnailObj;
+  return <ImageComponent src={url} alt={altText} />;
+};
 
-const SubSection = ({ layout, data, heading }: SubSectionProps) => {
+const SubSection = ({ layout, data, heading, thumbnail }: SubSectionProps) => {
   return (
     <LayoutWrapper>
       <ContentWrapper>
         <TopContainer>
-          <ThumbnailContainer>{data?.thumbnail}</ThumbnailContainer>
+          {thumbnail && (
+            <ThumbnailContainer>
+              {_renderThumbnail(thumbnail)}
+            </ThumbnailContainer>
+          )}
           {heading && <TitleContainer>{heading}</TitleContainer>}
         </TopContainer>
         <BodyContainer>{data?.body}</BodyContainer>
