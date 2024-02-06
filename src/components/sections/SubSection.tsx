@@ -98,9 +98,9 @@ const _renderGrid = (data: Array<GridObj>) => {
   const generatedKey = window && window.crypto && window.crypto.randomUUID();
   return (
     data &&
-    data.map((gridObj: GridObj) => {
+    data.map((gridObj: GridObj, index) => {
       return (
-        <GridItem key={generatedKey}>
+        <GridItem key={generatedKey + `${index}`}>
           {gridObj?.heading && gridObj.heading}
         </GridItem>
       );
