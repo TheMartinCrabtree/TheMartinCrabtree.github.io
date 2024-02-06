@@ -46,10 +46,16 @@ const ContentWrapper = styled.div`
   background-color: #302c2c;
 `;
 
-const TopContainer = styled.div``;
+const TopContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
 const ThumbnailContainer = styled.div``;
-const TitleContainer = styled.h3`
+const TitleContainer = styled.div`
+  justify-self: center;
+`;
+const TitleText = styled.h3`
   color: lightSteelBlue;
   margin: 0.25em 25px;
 `;
@@ -68,8 +74,10 @@ const GridContainer = styled.div`
 
 const GridItem = styled.div`
   min-width: 8vw;
+  transition: all 0.2s ease-in-out;
   &:hover {
     color: cornflowerblue;
+    transform: scale(1.1);
   }
 `;
 
@@ -117,7 +125,11 @@ const SubSection = ({ layout, data, heading, thumbnail }: SubSectionProps) => {
               {_renderThumbnail(thumbnail)}
             </ThumbnailContainer>
           )}
-          {heading && <TitleContainer>{heading}</TitleContainer>}
+          {heading && (
+            <TitleContainer>
+              <TitleText>{heading}</TitleText>
+            </TitleContainer>
+          )}
         </TopContainer>
         <BodyContainer>{data?.body}</BodyContainer>
         {data && layout === "grid" && (
