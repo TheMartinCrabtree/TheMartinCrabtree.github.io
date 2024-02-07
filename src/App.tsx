@@ -17,7 +17,7 @@ const Background = styled.div`
 
 const MainWrapper = styled.div`
   background-color: black;
-  opacity: 0.9;
+  opacity: 0.95;
   min-width: 340px;
 
   @media screen and (min-width: ${breakpoints.desktop}) {
