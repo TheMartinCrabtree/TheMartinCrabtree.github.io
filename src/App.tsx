@@ -9,17 +9,16 @@ import { MainSection } from "./components/sections";
 import data from "./data";
 // import "./App.css";
 
-// body: skills & expertise, projects, experience
-
 // for testing scrolling etc
 const Background = styled.div`
   background-image: url(background.jpg);
+  background-size: 100%;
 `;
 
-const TempBody = styled.div`
-  height: 100vh;
+const MainWrapper = styled.div`
   background-color: black;
-  opacity: 0.9;
+  opacity: 0.95;
+  min-width: 340px;
 
   @media screen and (min-width: ${breakpoints.desktop}) {
     max-width: 1280px;
@@ -42,7 +41,7 @@ function App() {
 
   return (
     <Background>
-      <TempBody>
+      <MainWrapper>
         <LayoutWrapper>
           <Header {...header} />
           <Hero {...hero} />
@@ -50,7 +49,7 @@ function App() {
           <Spacer />
           <Footer {...footer} />
         </LayoutWrapper>
-      </TempBody>
+      </MainWrapper>
     </Background>
   );
 }

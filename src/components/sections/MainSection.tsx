@@ -22,8 +22,20 @@ const MainSection = ({ sections }: MainSectionProps) => {
   const _renderSubSections = ({ sections }: MainSectionProps) => {
     return (
       sections &&
-      sections.map(({ data }: SubSectionProps) => {
-        return <SubSection {...data} />;
+      sections.map(({ data, layout, heading, thumbnail }: SubSectionProps) => {
+        // need to implement layout property
+        const generatedKey =
+          window && window.crypto && window.crypto.randomUUID();
+
+        return (
+          <SubSection
+            key={generatedKey}
+            layout={layout}
+            heading={heading}
+            thumbnail={thumbnail}
+            data={data}
+          />
+        );
       })
     );
   };
@@ -35,4 +47,5 @@ const MainSection = ({ sections }: MainSectionProps) => {
   );
 };
 
+export { type MainSectionProps };
 export default MainSection;

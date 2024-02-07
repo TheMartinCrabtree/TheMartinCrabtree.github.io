@@ -1,42 +1,49 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
+interface TextBlock {
+  title?: string;
+  subtitle?: string;
+  body?: string;
+}
+
 export interface HeroProps {
-  textblock?: any;
+  textblock?: TextBlock;
   imageblock?: any;
 }
 
 const HeroContainer = styled.div`
-  color: black;
+  color: lightgrey;
+  background-color: rgb(26 36 71);
   display: flex;
   flex-direction: row;
   margin: 0 auto;
   height: auto;
   width: 100%;
-  text-align: center;
 `;
 
 const TextContainer = styled.div`
-  width: 50%;
-  background-color: lightgrey;
+  padding: 20px;
+  width: 100%;
 `;
 
-// background-image: url(headshot.jpg);
 const ImageContainer = styled.div`
   width: auto;
-
-  background-color: lightslategrey;
+  padding: 20px 20px;
 `;
 
 const BodyContainer = styled.div`
-  font-size: 10px;
+  margin: 1vw 0px;
+  font-size: 15px;
 `;
 
 const ImageComponent = styled.img`
+  max-height: 20vh;
   max-width: 100%;
 `;
 
 // need to set fonts
+// need to make the image and title stack for mobile viewports
 const Hero = ({ textblock, imageblock }: HeroProps) => {
   return (
     <HeroContainer>
@@ -48,7 +55,7 @@ const Hero = ({ textblock, imageblock }: HeroProps) => {
         )}
       </TextContainer>
       <ImageContainer>
-        <ImageComponent src="./headshot.jpg" alt="image" />
+        <ImageComponent src={imageblock.url} alt={imageblock.altText} />
       </ImageContainer>
     </HeroContainer>
   );
