@@ -2,11 +2,11 @@ import React from "react";
 import { Carousel as BootstrapCarousel } from "react-bootstrap";
 
 const CarouselItem = (props) => {
-  const { imageData, captionData } = props;
+  const { imageData, captionData, linkData, id } = props;
 
   const _renderImage = (imageData) => {
-    const { className, src, altText } = imageData;
-    return <img className={className} src={src} alt={altText} />;
+    const { src, altText } = imageData;
+    return <img className={"d-block w-100"} src={src} alt={altText} />;
   };
   const _renderCaption = (captionData) => {
     const { headerText, supportingText } = captionData;
@@ -17,9 +17,13 @@ const CarouselItem = (props) => {
       </BootstrapCarousel.Caption>
     );
   };
+  const _onClickHandler = (event) => {
+    event.preventDefault();
+    console.log("clicked - now do something");
+  };
 
   return (
-    <BootstrapCarousel.Item>
+    <BootstrapCarousel.Item onClick={_onClickHandler} key={id}>
       {imageData && imageData.src && _renderImage(imageData)}
       {captionData && captionData.headerText && _renderCaption(captionData)}
     </BootstrapCarousel.Item>

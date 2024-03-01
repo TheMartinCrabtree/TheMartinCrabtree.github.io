@@ -9,19 +9,12 @@ const Carousel = (props) => {
     return dataArr.map((cardData) => {
       const { imgData, textData, linkData, id } = cardData;
       return (
-        <BootstrapCarousel.Item>
-          {imgData && imgData.srcData && (
-            <img
-              className="d-block w-100"
-              src={imgData.srcData}
-              alt={imgData.altData}
-            />
-          )}
-          <BootstrapCarousel.Caption>
-            <h3>{textData.headingText}</h3>
-            <p>{textData.bodyText}</p>
-          </BootstrapCarousel.Caption>
-        </BootstrapCarousel.Item>
+        <CarouselItem
+          imgData={imgData}
+          textData={textData}
+          linkData={linkData}
+          id={id}
+        />
       );
     });
   };
