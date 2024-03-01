@@ -1,15 +1,33 @@
 import React from "react";
 import { Carousel as BootstrapCarousel } from "react-bootstrap";
 
-const CarouselItem = (props) => {
-  const { imageData, captionData, linkData, id } = props;
+interface imageDataObj {
+  src: string;
+  altText?: string;
+}
 
-  const _renderImage = (imageData) => {
-    const { src, altText } = imageData;
+interface captionDataObj {
+  headerText: string;
+  supportingText?: string;
+}
+
+export interface CarouselItemProps {
+  imageData?: imageDataObj;
+  captionData: captionDataObj;
+  linkData?: any;
+  id: string;
+}
+
+const CarouselItem = ({
+  imageData,
+  captionData,
+  linkData,
+  id,
+}: CarouselItemProps) => {
+  const _renderImage = ({ src, altText }: imageDataObj) => {
     return <img className={"d-block w-100"} src={src} alt={altText} />;
   };
-  const _renderCaption = (captionData) => {
-    const { headerText, supportingText } = captionData;
+  const _renderCaption = ({ headerText, supportingText }: captionDataObj) => {
     return (
       <BootstrapCarousel.Caption>
         <h3>{headerText}</h3>
@@ -17,7 +35,7 @@ const CarouselItem = (props) => {
       </BootstrapCarousel.Caption>
     );
   };
-  const _onClickHandler = (event) => {
+  const _onClickHandler = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     console.log("clicked - now do something");
   };
