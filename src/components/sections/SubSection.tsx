@@ -23,7 +23,7 @@ interface ThumbObj {
 }
 
 type SubSectionProps = {
-  layout: "grid" | "textBlock" | "imageBlock" | "listBlock";
+  layout: "grid" | "textBlock" | "imageBlock" | "listBlock" | "carousel";
   heading?: string;
   thumbnail?: ThumbObj;
   data?: any;

@@ -2,7 +2,6 @@ const sectionArr = [
   {
     layout: "grid",
     heading: "Skills:",
-    // React, Jest, Storybook, Styled-components, WC3 Accessibility, Ruby, Rails, SQL, REST API, JavaScript, Redux, HTML/CSS, Java, C#, SQL, PostgreSQL, SQLite, Linux, Git, TypeScript, Express.js
     data: [
       { heading: "React.js" },
       { heading: "JavaScript" },
@@ -11,6 +10,7 @@ const sectionArr = [
       { heading: "React Storybook" },
       { heading: "Styled-components" },
       { heading: "WC3 Accessibility" },
+      { heading: "Node.js" },
       { heading: "Ruby on Rails" },
       { heading: "SQL" },
       { heading: "REST API" },
@@ -21,8 +21,54 @@ const sectionArr = [
       { heading: "PostgreSQL" },
       { heading: "SQLite" },
       { heading: "Linux" },
+      { heading: "Python" },
       { heading: "Git" },
       { heading: "Express.js" },
+    ],
+  },
+  {
+    layout: "carousel",
+    heading: "Projects & Demos:",
+    data: [
+      {
+        id: "carosel-card-001",
+        imageData: {
+          src: "https://via.placeholder.com/800x400",
+          altText: "First Slide",
+        },
+        captionData: {
+          headerText: "First slide label",
+          supportingText:
+            "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+        },
+        linkData: {},
+      },
+      {
+        id: "carosel-card-002",
+        imageData: {
+          src: "https://via.placeholder.com/800x400",
+          altText: "Second Slide",
+        },
+        captionData: {
+          headerText: "Second slide label",
+          supportingText:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        },
+        linkData: {},
+      },
+      {
+        id: "carosel-card-003",
+        imageData: {
+          src: "https://via.placeholder.com/800x400",
+          altText: "Third Slide",
+        },
+        captionData: {
+          headerText: "Third slide label",
+          supportingText:
+            "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
+        },
+        linkData: {},
+      },
     ],
   },
   {
@@ -50,13 +96,6 @@ const sectionArr = [
       body: "Mean Guppy, Remote, New York Software Engineer, 2020-present  Software engineering and web design as a subcontractor for Verizon Marketing Team's.  Brooklyn Game Labs, Brooklyn, New York  Instructor, 2018-2019  Instruct cohorts of 15-20 kids aged 7-13 to play and design table-top games, guiding analysis on design choices. American Institute of Certified Public Accountants (AICPA), Ewing, New Jersey  Communications Specialist, 2007 - 2012.",
     },
   },
-  // {
-  //   layout: "textBlock",
-  //   data: {
-  //     heading: "text block 1 heading",
-  //     body: "testing body length: The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet. The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet. The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.",
-  //   },
-  // },
 ];
 
 const data = {
