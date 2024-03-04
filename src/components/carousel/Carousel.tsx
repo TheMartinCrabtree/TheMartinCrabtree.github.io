@@ -1,22 +1,26 @@
 import React from "react";
 import { Carousel as BootstrapCarousel } from "react-bootstrap";
 import CarouselItem from "./CarouselItem";
+import { CarouselItemProps } from "./CarouselItem";
 
-const Carousel = (props) => {
-  const { carouselData } = props;
+export interface CarouselProps {
+  carouselData: Array<CarouselItemProps>;
+}
 
-  const _renderItems = (dataArr) => {
-    return dataArr.map((cardData) => {
-      const { imgData, textData, linkData, id } = cardData;
-      return (
-        <CarouselItem
-          imgData={imgData}
-          textData={textData}
-          linkData={linkData}
-          id={id}
-        />
-      );
-    });
+const Carousel = ({ carouselData }: CarouselProps) => {
+  const _renderItems = (carouselData: CarouselItemProps[]) => {
+    return carouselData.map(
+      ({ imageData, captionData, linkData, id }: CarouselItemProps) => {
+        return (
+          <CarouselItem
+            imageData={imageData}
+            captionData={captionData}
+            linkData={linkData}
+            id={id}
+          />
+        );
+      }
+    );
   };
 
   return (
