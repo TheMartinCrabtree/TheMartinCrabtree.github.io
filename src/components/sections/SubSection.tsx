@@ -1,4 +1,6 @@
 import React, { ReactNode } from "react";
+import { Carousel } from "../carousel";
+import { CarouselItemProps } from "../carousel/CarouselItem";
 import styled from "styled-components";
 
 interface DataObj {
@@ -109,6 +111,10 @@ const _renderGrid = (data: Array<GridObj>) => {
   );
 };
 
+const _renderCarousel = (data: Array<CarouselItemProps>) => {
+  return <Carousel carouselData={data} />;
+};
+
 const _renderListBlock = (data: Array<ListObj>) => {};
 
 const _renderThumbnail = (thumbnailObj: ThumbObj) => {
@@ -136,6 +142,7 @@ const SubSection = ({ layout, data, heading, thumbnail }: SubSectionProps) => {
         {data && layout === "grid" && (
           <GridContainer>{_renderGrid(data)}</GridContainer>
         )}
+        {data && layout === "carousel" && <div>{_renderCarousel(data)}</div>}
       </ContentWrapper>
     </LayoutWrapper>
   );
