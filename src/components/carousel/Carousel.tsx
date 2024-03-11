@@ -13,26 +13,35 @@ const Wrapper = styled.div`
   max-height: 1080px;
 `;
 
+const ImageWrapper = styled.div`
+  height: 400px;
+  margin-bottom: 500px;
+`;
+
 const _renderCarousel = () => {
   return (
     <BootstrapCarousel>
       <BootstrapCarousel.Item>
-        <img
-          className="d-block w-100"
-          src={"./myverizon-screen.png"}
-          alt={"my verizon app screenshot"}
-        />
+        <ImageWrapper>
+          <img
+            className="d-block w-100"
+            src={"./myverizon-screen.png"}
+            alt={"my verizon app screenshot"}
+          />
+        </ImageWrapper>
         <BootstrapCarousel.Caption>
           <h3>{"First slide label"}</h3>
           <p>{"Nulla vitae elit libero, a pharetra augue mollis interdum."}</p>
         </BootstrapCarousel.Caption>
       </BootstrapCarousel.Item>
       <BootstrapCarousel.Item>
-        <img
-          className="d-block w-100"
-          src={"https://via.placeholder.com/800x400"}
-          alt={"Second Slide"}
-        />
+        <ImageWrapper>
+          <img
+            className="d-block w-100"
+            src={"./myverizon-screen.png"}
+            alt={"my verizon app screenshot"}
+          />
+        </ImageWrapper>
         <BootstrapCarousel.Caption>
           <h3>{"Second slide label"}</h3>
           <p>
@@ -41,11 +50,13 @@ const _renderCarousel = () => {
         </BootstrapCarousel.Caption>
       </BootstrapCarousel.Item>
       <BootstrapCarousel.Item>
-        <img
-          className="d-block w-100"
-          src={"https://via.placeholder.com/800x400"}
-          alt={"Third Slide"}
-        />
+        <ImageWrapper>
+          <img
+            className="d-block w-100"
+            src={"./myverizon-screen.png"}
+            alt={"my verizon app screenshot"}
+          />
+        </ImageWrapper>
         <BootstrapCarousel.Caption>
           <h3>{"Third slide label"}</h3>
           <p>{"Lorem ipsum dolor sit amet, consectetur adipiscing elit."}</p>
