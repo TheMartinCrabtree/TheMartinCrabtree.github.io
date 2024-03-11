@@ -11,48 +11,6 @@ import { Carousel as BootstrapCarousel } from "react-bootstrap";
 import data from "./data";
 // import "./App.css";
 
-const tempCData = [
-  {
-    id: "carosel-card-001",
-    imageData: {
-      src: "https://via.placeholder.com/800x400",
-      altText: "First Slide",
-    },
-    captionData: {
-      headerText: "First slide label",
-      supportingText:
-        "Nulla vitae elit libero, a pharetra augue mollis interdum.",
-    },
-    linkData: {},
-  },
-  {
-    id: "carosel-card-002",
-    imageData: {
-      src: "https://via.placeholder.com/800x400",
-      altText: "Second Slide",
-    },
-    captionData: {
-      headerText: "Second slide label",
-      supportingText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    linkData: {},
-  },
-  {
-    id: "carosel-card-003",
-    imageData: {
-      src: "https://via.placeholder.com/800x400",
-      altText: "Third Slide",
-    },
-    captionData: {
-      headerText: "Third slide label",
-      supportingText:
-        "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
-    },
-    linkData: {},
-  },
-];
-
 // for testing scrolling etc
 const Background = styled.div`
   background-image: url(background.jpg);

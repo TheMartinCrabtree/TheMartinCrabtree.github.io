@@ -185,7 +185,7 @@ const SubSection = ({ layout, data, heading, thumbnail }: SubSectionProps) => {
           <GridContainer>{_renderGrid(data)}</GridContainer>
         )}
         {/* {data && layout === "carousel" && <div>{_renderCarousel(data)}</div>} */}
-        {data && layout === "carousel" && <div>{_renderCarousel()}</div>}
+        {/* <div>{_renderCarousel()}</div> */}
       </ContentWrapper>
     </LayoutWrapper>
   );
