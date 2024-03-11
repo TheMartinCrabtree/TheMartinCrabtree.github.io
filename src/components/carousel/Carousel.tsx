@@ -2,10 +2,16 @@ import React from "react";
 import { Carousel as BootstrapCarousel } from "react-bootstrap";
 import CarouselItem from "./CarouselItem";
 import { CarouselItemProps } from "./CarouselItem";
+import styled from "styled-components";
 
 export interface CarouselProps {
   carouselData: Array<CarouselItemProps>;
 }
+
+const Wrapper = styled.div`
+  max-width: 1920px;
+  max-height: 1080px;
+`;
 
 const _renderCarousel = () => {
   return (
@@ -13,8 +19,8 @@ const _renderCarousel = () => {
       <BootstrapCarousel.Item>
         <img
           className="d-block w-100"
-          src={"https://via.placeholder.com/800x400"}
-          alt={"First Slide"}
+          src={"./myverizon-screen.png"}
+          alt={"my verizon app screenshot"}
         />
         <BootstrapCarousel.Caption>
           <h3>{"First slide label"}</h3>
@@ -65,11 +71,13 @@ const Carousel = ({ carouselData }: CarouselProps) => {
     );
   };
 
-  return (
-    <BootstrapCarousel>
-      {carouselData && _renderItems(carouselData)}
-    </BootstrapCarousel>
-  );
+  // return (
+  //   <BootstrapCarousel>
+  //     {carouselData && _renderItems(carouselData)}
+  //   </BootstrapCarousel>
+  // );
+
+  return <Wrapper>{_renderCarousel()}</Wrapper>;
 };
 
 export default Carousel;

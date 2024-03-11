@@ -5,8 +5,6 @@ import { Header } from "./components/header";
 import { Footer } from "./components/footer";
 import { Hero } from "./components/hero";
 import { MainSection } from "./components/sections";
-// temp carousel for testing
-import { Carousel as BootstrapCarousel } from "react-bootstrap";
 // temp test data
 import data from "./data";
 // import "./App.css";
