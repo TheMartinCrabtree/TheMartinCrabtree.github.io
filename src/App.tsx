@@ -11,13 +11,13 @@ import data from "./data";
 
 // for testing scrolling etc
 const Background = styled.div`
-  background-image: url(background.jpg);
   background-size: 100%;
 `;
+// background-image: url(background.jpg);
 
 const MainWrapper = styled.div`
   background-color: black;
-  opacity: 0.95;
+
   min-width: 340px;
 
   @media screen and (min-width: ${breakpoints.desktop}) {

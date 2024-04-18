@@ -54,7 +54,9 @@ const TopContainer = styled.div`
   flex-direction: row;
 `;
 
-const ThumbnailContainer = styled.div``;
+const ThumbnailContainer = styled.div`
+  margin-left: 25px;
+`;
 const TitleContainer = styled.div`
   justify-self: center;
 `;
@@ -144,7 +146,6 @@ const SubSection = ({ layout, data, heading, thumbnail }: SubSectionProps) => {
           <GridContainer>{_renderGrid(data)}</GridContainer>
         )}
         {data && layout === "carousel" && <div>{_renderCarousel(data)}</div>}
-        {/* <div>{_renderCarousel()}</div> */}
       </ContentWrapper>
     </LayoutWrapper>
   );

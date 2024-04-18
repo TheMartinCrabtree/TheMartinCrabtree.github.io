@@ -38,8 +38,10 @@ const BodyContainer = styled.div`
 `;
 
 const ImageComponent = styled.img`
-  max-height: 20vh;
-  max-width: 100%;
+  height: 18vh;
+  width: 18vh;
+  border-radius: 50%;
+  object-fit: cover;
 `;
 
 // need to set fonts
