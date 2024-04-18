@@ -17,6 +17,7 @@ const HeaderWrapper = styled.div`
   color: white;
   position: sticky;
   top: 0;
+  z-index: 9999;
 
   h1 {
     margin: 0px; !important

@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 import SubSection, { type SubSectionProps } from "./SubSection";
+import Tooltip, { type TooltipProps } from "../tooltip/Tooltip";
 
 // need to update prop type for subsection
 type MainSectionProps = {
@@ -42,6 +43,7 @@ const MainSection = ({ sections }: MainSectionProps) => {
 
   return (
     <MainSectionWrapper>
+      <Tooltip tooltipBody="testing tooltip settings this is body" />
       {sections && _renderSubSections({ sections })}
     </MainSectionWrapper>
   );

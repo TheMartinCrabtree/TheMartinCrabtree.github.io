@@ -39,7 +39,9 @@ const Tooltip = ({
         onMouseOver={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
       >
-        text goes here
+        {tooltipHeading && <div>{tooltipHeading}</div>}
+        {/* <img /> */}
+        <p>{tooltipBody}</p>
       </TextWrapper>
       {showTooltip && (
         <TooltipWrapper onMouseLeave={() => setShowTooltip(false)}>
