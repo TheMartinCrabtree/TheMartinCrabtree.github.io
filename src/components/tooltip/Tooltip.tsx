@@ -1,51 +1,64 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import ReactDOM from "react-dom";
+import styled, { AnyStyledComponent } from "styled-components";
 
 export interface TooltipProps {
   tooltipHeading?: string;
   tooltipBody: string;
   tooltipImage?: string;
+  children?: any;
 }
 
 const TextWrapper = styled.div`
   cursor: pointer;
   text-decoration: underline;
+  display: inline-block;
 `;
 
-const TooltipWrapper = styled.div`
+const TooltipWrapper = styled.div<{ xCoord: number; yCoord: number }>`
   &:hover {
     position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    backgroundcolor: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 8px;
+    top: ${({ yCoord }) => `${yCoord}`};
+    left: ${({ xCoord }) => `${xCoord}`};
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
     borderradius: 5px;
     zindex: 9999;
   }
 `;
 
-const Tooltip = ({
+const Tooltip: React.FC<TooltipProps> = ({
   tooltipHeading,
   tooltipBody,
   tooltipImage,
-}: TooltipProps) => {
-  const [showTooltip, setShowTooltip] = useState(false);
+  children,
+}) => {
+  const [isTooltipVisible, setIsTooltipVisible] = useState(false);
+  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseOver = (event: React.MouseEvent) => {
+    setIsTooltipVisible(true);
+    setTooltipPosition({ x: event.clientX, y: event.clientY });
+  };
+
+  const handleMouseLeave = () => {
+    setIsTooltipVisible(false);
+  };
 
   return (
     <div>
       <TextWrapper
-        onMouseOver={() => setShowTooltip(true)}
-        onMouseLeave={() => setShowTooltip(false)}
+        onMouseOver={handleMouseOver}
+        onMouseLeave={handleMouseLeave}
       >
-        {tooltipHeading && <div>{tooltipHeading}</div>}
-        {/* <img /> */}
-        <p>{tooltipBody}</p>
+        testing testing testing
+        {children}
       </TextWrapper>
-      {showTooltip && (
-        <TooltipWrapper onMouseLeave={() => setShowTooltip(false)}>
-          tooltip text
+      {isTooltipVisible && tooltipBody && (
+        <TooltipWrapper xCoord={tooltipPosition.x} yCoord={tooltipPosition.y}>
+          <div>{tooltipHeading}</div>
+          <p>{tooltipBody}</p>
         </TooltipWrapper>
       )}
     </div>
