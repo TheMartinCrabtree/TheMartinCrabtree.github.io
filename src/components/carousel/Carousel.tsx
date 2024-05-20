@@ -18,6 +18,22 @@ const ImageWrapper = styled.div`
   margin-bottom: 500px;
 `;
 
+const VideoWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+`;
+
+const StyledVideo = styled.video`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`;
+
 const _renderCarousel = () => {
   return (
     <BootstrapCarousel>
@@ -35,11 +51,11 @@ const _renderCarousel = () => {
         </BootstrapCarousel.Caption>
       </BootstrapCarousel.Item>
       <BootstrapCarousel.Item>
-        <ImageWrapper>
-          <video>
+        <VideoWrapper>
+          <StyledVideo controls>
             <source type="video/mp4" src="./chatbot-web.mp4" />
-          </video>
-        </ImageWrapper>
+          </StyledVideo>
+        </VideoWrapper>
         <BootstrapCarousel.Caption>
           <h3>{"OpenAI Chat Interaction"}</h3>
           <p>
