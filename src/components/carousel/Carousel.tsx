@@ -30,20 +30,18 @@ const _renderCarousel = () => {
           />
         </ImageWrapper>
         <BootstrapCarousel.Caption>
-          <h3>{"First slide label"}</h3>
+          <h3>{"MyVerizon App"}</h3>
           <p>{"Nulla vitae elit libero, a pharetra augue mollis interdum."}</p>
         </BootstrapCarousel.Caption>
       </BootstrapCarousel.Item>
       <BootstrapCarousel.Item>
         <ImageWrapper>
-          <img
-            className="d-block w-100"
-            src={"./myverizon-screen.png"}
-            alt={"my verizon app screenshot"}
-          />
+          <video>
+            <source type="video/mp4" src="./chatbot-web.mp4" />
+          </video>
         </ImageWrapper>
         <BootstrapCarousel.Caption>
-          <h3>{"Second slide label"}</h3>
+          <h3>{"OpenAI Chat Interaction"}</h3>
           <p>
             {"Praesent commodo cursus magna, vel scelerisque nisl consectetur."}
           </p>
