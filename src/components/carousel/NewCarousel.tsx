@@ -1,6 +1,12 @@
 import React, { useRef, useState, useEffect, useCallback } from "react";
-import { SectionHeading } from "../utilities/styledfonts";
 import styled from "styled-components";
+
+interface SlideData {
+  title?: string;
+  url?: string;
+  darkmode?: boolean;
+  bodyText?: string;
+}
 
 const Container = styled.div`
   min-height: 3vh;
@@ -9,7 +15,10 @@ const Container = styled.div`
   background: rgb(0 0 0 / 3%);
 `;
 
-const CardsContainer = styled.div`
+const CardsContainer = styled.div<{
+  $totalSlides: number;
+  $currentIndex: number;
+}>`
   display: flex;
   gap: 3em;
   transition: transform ease-out 0.3s;
@@ -29,7 +38,7 @@ const CardsContainer = styled.div`
   padding: 0.5em 0;
 `;
 
-const Card = styled.div`
+const Card = styled.div<{ $image?: string }>`
   color: black;
   width: 80vw;
   min-height: 300px;
@@ -46,11 +55,15 @@ const Card = styled.div`
     min-height: 250px;
   }
 `;
+const SectionHeading = styled.span`
+  font-size: 1.3em;
+  font-weight: 700;
+`;
 
 const TextContainer = styled.div`
   margin: 1em;
 `;
-const CardTitle = styled.h4`
+const CardTitle = styled.h4<{ $darkmode: boolean }>`
   display: block;
   font-size: 1.2em;
   font-weight: bold;
@@ -71,7 +84,7 @@ const DotContainer = styled.div`
   gap: 5px;
   justify-content: center;
 `;
-const DotWrapper = styled.div`
+const DotWrapper = styled.div<{ $index: number; $currentIndex: number }>`
   position: relative;
   top: 20%;
   cursor: pointer;
@@ -110,7 +123,7 @@ const LeftArrow = styled.div`
   }
 `;
 
-const BodyText = styled.p`
+const BodyText = styled.p<{ $darkmode?: boolean }>`
   ${({ $darkmode }) => $darkmode && `color: white;`}
 `;
 
@@ -191,7 +204,7 @@ const Carousel = () => {
     return (
       slides &&
       slides.map((slide, index) => {
-        const { title, url, darkmode, bodyText } = slide;
+        const { title, url, darkmode, bodyText }: SlideData = slide;
         return (
           <Card
             onClick={() => console.log("clicked on card", index)}
