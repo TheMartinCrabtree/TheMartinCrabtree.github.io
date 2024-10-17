@@ -63,7 +63,7 @@ const SectionHeading = styled.span`
 const TextContainer = styled.div`
   margin: 1em;
 `;
-const CardTitle = styled.h4<{ $darkmode: boolean }>`
+const CardTitle = styled.h4<{ $darkmode?: boolean }>`
   display: block;
   font-size: 1.2em;
   font-weight: bold;
@@ -172,7 +172,7 @@ const Carousel = () => {
     },
   ];
   const autoScroll = false;
-  const timerRef = useRef(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
@@ -184,7 +184,7 @@ const Carousel = () => {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   }, [currentIndex, slides]);
-  const goToSlide = (slideIndex) => {
+  const goToSlide = (slideIndex: number) => {
     setCurrentIndex(slideIndex);
   };
 
@@ -197,7 +197,9 @@ const Carousel = () => {
       goToNext();
     }, 2000);
 
-    return () => clearTimeout(timerRef.current);
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
   }, [goToNext]);
 
   const _renderCards = () => {
