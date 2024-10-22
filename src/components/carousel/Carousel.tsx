@@ -47,7 +47,11 @@ const _renderCarousel = () => {
         </ImageWrapper>
         <BootstrapCarousel.Caption>
           <h3>{"MyVerizon App"}</h3>
-          <p>{"Nulla vitae elit libero, a pharetra augue mollis interdum."}</p>
+          <p>
+            {
+              "Frontend React Developer: Created React components that are extensible and W3C accessibility compliant for web and mobile platforms."
+            }
+          </p>
         </BootstrapCarousel.Caption>
       </BootstrapCarousel.Item>
       <BootstrapCarousel.Item>
@@ -58,9 +62,7 @@ const _renderCarousel = () => {
         </VideoWrapper>
         <BootstrapCarousel.Caption>
           <h3>{"OpenAI Chat Interaction"}</h3>
-          <p>
-            {"Praesent commodo cursus magna, vel scelerisque nisl consectetur."}
-          </p>
+          <p>{""}</p>
         </BootstrapCarousel.Caption>
       </BootstrapCarousel.Item>
       <BootstrapCarousel.Item>
