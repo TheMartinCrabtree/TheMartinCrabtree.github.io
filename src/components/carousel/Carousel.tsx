@@ -66,16 +66,14 @@ const _renderCarousel = () => {
         </BootstrapCarousel.Caption>
       </BootstrapCarousel.Item>
       <BootstrapCarousel.Item>
-        <ImageWrapper>
-          <img
-            className="d-block w-100"
-            src={"./myverizon-screen.png"}
-            alt={"my verizon app screenshot"}
-          />
-        </ImageWrapper>
+        <VideoWrapper>
+          <StyledVideo controls>
+            <source type="video/mp4" src="./nyc-graph-demo.mp4" />
+          </StyledVideo>
+        </VideoWrapper>
         <BootstrapCarousel.Caption>
-          <h3>{"Third slide label"}</h3>
-          <p>{"Lorem ipsum dolor sit amet, consectetur adipiscing elit."}</p>
+          <h3>{"Data Visualization"}</h3>
+          <p>{""}</p>
         </BootstrapCarousel.Caption>
       </BootstrapCarousel.Item>
     </BootstrapCarousel>
